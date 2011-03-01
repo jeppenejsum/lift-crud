@@ -1,0 +1,5 @@
+lib_managed/*
+*.db
+*.lock
+project/boot
+target
