@@ -42,7 +42,9 @@ class Boot {
     def m1:Menu = Menu.i("Home") / "index" >> User.AddUserMenusAfter
     def m2:Menu = Menu.i("MenuTest") / "menutest"
 
-    def menu:List[Menu] =  m1::m2:: code.snippet.Orders.menus:::code.snippet.LineItems.menus
+    def menu:List[Menu] =  m1::m2:: 
+      code.snippet.LineItems.menus:::
+      code.snippet.Orders.menus
 
     // Build SiteMap
     def sitemap = SiteMap(menu:_*)
